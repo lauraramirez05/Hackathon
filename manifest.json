@@ -1,0 +1,22 @@
+{
+    "name": "Cute Cats Everywhere",
+    "version": "0.1",
+    "description": "Replace every image on the page with cat image",
+    "manifest_version": 3,
+    "icons": {
+    "16": "images/cat1.png"
+    },
+    "web_accessible_resources": 
+    [
+        {
+            "resources": ["images/*.png"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["js/contentScript.js"]
+    }]
+}
+
